@@ -1,0 +1,45 @@
+# this is the test file for the DAT converter. 
+This is the first line with #bfblock
+This is the second line with #bfblock
+This is the 3rd line with #bfblock
+MP,UVID',6
+MP,UVID',2
+MP,UVID',4
+MP,UVID',8
+'/com,******************* SOLVE FOR LS 1
+/nopr'
+bfblock,2,temp
+(i9,e20.9e3)
+  1     4.002176514e+02
+  2     4.002642517e+02
+bf,end,loc,-1,
+/gopr
+This is the 4thline with #bfblock
+This is the 5th line with #bfblock
+'/com,******************* SOLVE FOR LS 2
+/nopr'
+#bfblock,2,temp
+#(i9,e20.9e3)
+#  3     4.002176514e+02
+#  4     4.002642517e+02
+#bf,end,loc,-1
+/gopr
+This is the 6 line with #bfblock
+This is the 7 line with #bfblock
+This is the 8 line with #bfblock
+This is the 8 line with #bfblock
+'/com,******************* SOLVE FOR LS 3
+/nopr'
+
+bfblock,2,temp
+(i9,e20.9e3)
+  5     4.002176514e+02
+  6     4.002642517e+02
+bf,end,loc,-1,
+#
+#
+#
+#
+#
+#
+/gopr
