@@ -22,3 +22,5 @@ wincertstore==0.2
 xlrd==2.0.1
 zipp==3.6.0
 tzdata==2024.2
+flask_login
+flask_httpauth
