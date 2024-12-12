@@ -2,7 +2,7 @@ import json
 from flask import Flask,render_template, request, jsonify, url_for,Response, redirect,send_file
 import pandas as pd
 from flask_cors import cross_origin
-
+from flask_httpauth import HTTPBasicAuth
 from io import BytesIO
 from zipfile import ZipFile
 
@@ -14,8 +14,12 @@ app = Flask(__name__)
 @app.route('/home')
 @cross_origin()
 def home_page():
+        if request.authorization and request.authorization.username == 'username' and request.authorization.password =='hcl123!':
+        return render_template('index1.html')
 
-    return render_template('index1.html')
+    return make_response('could not verify!',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
+
+    #return render_template('index1.html')
 
 @app.route('/about')
 def about():
