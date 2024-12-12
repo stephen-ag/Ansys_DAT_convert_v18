@@ -15,9 +15,8 @@ app = Flask(__name__)
 @cross_origin()
 def home_page():
         if request.authorization and request.authorization.username == 'username' and request.authorization.password =='hcl123!':
-        return render_template('index1.html')
-
-    return make_response('could not verify!',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
+                return render_template('index1.html')
+        return make_response('could not verify!',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
 
     #return render_template('index1.html')
 
